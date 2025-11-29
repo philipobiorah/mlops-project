@@ -1,0 +1,1 @@
+a complete MLOps workflow for deploying a PyTorch-based BERT text classifier to Google Cloud Vertex AI using a custom container, FastAPI, and Cloud Build. What started as a simple training notebook evolved into a fully production-ready deployment pipeline—one that mirrors how modern ML teams ship real systems.
