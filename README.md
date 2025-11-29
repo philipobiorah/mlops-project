@@ -25,16 +25,19 @@ This example shows how to deploy **any PyTorch model** using a custom container 
 ---
 
 ### `imdb_model/` — Deploying a Pretrained Hugging Face Model on Vertex AI
-This example focuses on **deploying an existing Hugging Face model** with minimal setup.
+This example demonstrates how to deploy an **existing Hugging Face model** to a Vertex AI Endpoint with minimal setup.
 
-It demonstrates:
-- Loading a pretrained sentiment model  
-- Creating a simple inference wrapper for Vertex AI  
-- Uploading the model to Vertex Model Registry  
-- Deploying directly to a managed Endpoint  
+Hugging Face model used:  
+👉 **https://huggingface.co/philipobiorah/bert-imdb-model**
+
+It includes:
+- Loading the pretrained classifier from Hugging Face  
+- Wrapping the model in a simple inference function  
+- Uploading the model to Vertex AI Model Registry  
+- Deploying the model to an Endpoint  
 - Making real-time sentiment predictions  
 
-This serves as an easy quickstart for using Vertex AI with pretrained transformer models.
+This example is ideal for users looking to quickly deploy transformer models using Vertex AI.
 
 ---
 
@@ -44,11 +47,11 @@ This folder contains a complete **AutoML Tabular pipeline** using Vertex AI.
 It covers:
 - Uploading the Dry Beans dataset to Cloud Storage  
 - Creating a Vertex AI Dataset  
-- Running AutoML model training  
-- Evaluating the generated model  
+- Running AutoML training  
+- Evaluating the best model  
 - Deploying the AutoML model to an Endpoint  
 
-Perfect for users who want a **no-code / low-code** introduction to Vertex AI training and deployment.
+Great for users who want a **no-code / low-code** introduction to Vertex AI model development.
 
 ---
 
@@ -75,6 +78,7 @@ To run these examples, you will need:
 - Basic familiarity with Python and machine learning concepts  
 
 ---
+
 ## License
 
 MIT License
@@ -90,7 +94,7 @@ flowchart TD
     A --> A3[Deploy to Vertex AI Endpoint]
 
     %% IMDB HUGGINGFACE (Pretrained Deployment)
-    B[imdb_model] --> B1[Load Pretrained HuggingFace Model]
+    B[imdb_model] --> B1[Load Pretrained HF Model<br>(bert-imdb-model)]
     B --> B2[Wrap Inference Code]
     B --> B3[Upload to Vertex Model Registry]
     B --> B4[Deploy to Endpoint]
@@ -104,4 +108,3 @@ flowchart TD
     root[Repository] --> A
     root --> B
     root --> C
-
